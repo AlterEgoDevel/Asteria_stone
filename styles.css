@@ -11,7 +11,7 @@ body {
   }
   
   .container {
-    width: 390px;
+    width: 100%;
     padding: 0 20px;
   }
   
@@ -20,12 +20,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 128px 0 0;
+    margin: 40px auto;
     background-color: #1c1c1e;
     border-radius: 5px;
     padding: 0 15px;
     height: 50px;
-    width: 100%;
+    width: 350px;
   }
   
   .top-icon {
@@ -36,13 +36,12 @@ body {
   .top-text {
     color: #9b9b9b;
     font-size: 18px;
-    margin-left: 15px;
   }
   
   .top-points {
     color: #9b9b9b;
     font-size: 18px;
-    margin-left: 55px;
+    margin-left: 20px;
   }
   
   .top-button {
@@ -59,7 +58,7 @@ body {
   /* Блок с фотографией */
   .profile-block {
     text-align: center;
-    margin: 120px 0 15px;
+    margin: 60px 0 15px;
   }
   
   .profile-photo {

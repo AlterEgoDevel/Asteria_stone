@@ -129,7 +129,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    margin: 22px auto 57px;
+    margin: 22px auto 30px;
     cursor: pointer;
   }
   
@@ -138,6 +138,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
+    margin-bottom: 30px;
   }
   
   .icon {
@@ -145,4 +146,5 @@ body {
     height: 30px;
     cursor: pointer;
   }
+  
   

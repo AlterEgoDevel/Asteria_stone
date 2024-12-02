@@ -1,0 +1,153 @@
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  /* Верхний блок */
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px auto;
+    background-color: #1c1c1e;
+    border-radius: 5px;
+    padding: 0 15px;
+    height: 50px;
+    width: 350px;
+  }
+  
+  .top-icon {
+    width: 16px;
+    height: 22px;
+  }
+  
+  .top-text {
+    color: #9b9b9b;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .top-points {
+    color: #9b9b9b;
+    font-size: 18px;
+    margin-left: 20px;
+  }
+  
+  .top-button {
+    background-color: #282828;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+    width: 86px;
+    cursor: pointer;
+  }
+  
+  /* Блок с фотографией */
+  .profile-block {
+    text-align: center;
+    margin: 60px 0 15px;
+  }
+  
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+  }
+  
+  .username {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  .points-total {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Шкала заполнения */
+  .progress-section {
+    text-align: center;
+    margin: 57px 0 0;
+  }
+  
+  .progress-percent {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .progress-bar-container {
+    width: 350px;
+    height: 20px;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #d46a00;
+    transition: width 0.5s ease;
+  }
+  
+  /* Таймер */
+  .timer {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #9b9b9b;
+    margin-top: 22px;
+  }
+  
+  /* Основная кнопка */
+  .main-button {
+    display: block;
+    width: 350px;
+    height: 44px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0fad00;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 22px auto 30px;
+    cursor: pointer;
+  }
+  
+  /* Нижние иконки */
+  .bottom-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 350px;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  

@@ -11,6 +11,7 @@ body, html {
   -webkit-user-select: none; /* Для WebKit-браузеров */
   -moz-user-select: none;    /* Для Firefox */
   -ms-user-select: none;     /* Для старого Internet Explorer */
+  outline: none; /* Убирает рамку фокуса */
 }
 
 #background {

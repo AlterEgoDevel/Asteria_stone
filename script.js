@@ -5,14 +5,20 @@ const progressFill = document.getElementById('progress-fill');
 const percentageDisplay = document.getElementById('percentage');
 const timerDisplay = document.getElementById('timer');
 
-let balance = 0;
+let balance = localStorage.getItem('balance') ? parseInt(localStorage.getItem('balance')) : 0;  // Загружаем сохранённый баланс из localStorage, если он есть
 let progress = 0;
 let interval;
 
+// Инициализация отображения баланса
+function initializeBalance() {
+  balanceDisplay.textContent = balance;
+}
+
 // Функция нажатия на монету
 coinCircle.addEventListener('click', () => {
-  balance += 1;
-  balanceDisplay.textContent = balance;
+  balance += 1;  // Добавляем 1 монету при нажатии
+  localStorage.setItem('balance', balance);  // Сохраняем новый баланс в localStorage
+  balanceDisplay.textContent = balance;  // Обновляем отображение баланса
 });
 
 // Логика кнопки Start
@@ -24,6 +30,7 @@ startButton.addEventListener('click', () => {
     startFarming();
   } else if (startButton.textContent === 'Claim') {
     balance += 4800; // Примерная награда
+    localStorage.setItem('balance', balance);  // Сохраняем новый баланс в localStorage
     balanceDisplay.textContent = balance;
     resetFarming();
   }
@@ -67,7 +74,10 @@ function formatTime(seconds) {
     .toString()
     .padStart(2, '0')}`;
 }
-
+// Инициализация баланса при загрузке страницы
+window.onload = () => {
+  initializeBalance();
+};
 
 const starContainer = document.getElementById('stars');
 
@@ -95,3 +105,33 @@ function createStar() {
 
 // Создание звезд каждые 200 мс
 setInterval(createStar, 200);
+
+
+
+function switchPage(selectedPage) {
+  // Убираем класс active у всех иконок
+  const icons = document.querySelectorAll(".menu-icon");
+  icons.forEach((icon) => {
+    icon.classList.remove("active");
+
+    // Меняем изображение на неактивное
+    if (icon.id === "home") icon.src = "img/home deactive.png";
+    if (icon.id === "tasks") icon.src = "img/tasks deactive.png";
+    if (icon.id === "referral") icon.src = "img/ref deactive.png";
+    if (icon.id === "info") icon.src = "img/info deactive.png";
+  });
+
+  // Добавляем класс active к выбранной иконке
+  const selectedIcon = document.getElementById(selectedPage);
+  selectedIcon.classList.add("active");
+
+  // Меняем изображение на активное
+  if (selectedPage === "home") selectedIcon.src = "img/home active.png";
+  if (selectedPage === "tasks") selectedIcon.src = "img/tasks active.png";
+  if (selectedPage === "referral") selectedIcon.src = "img/ref active.png";
+  if (selectedPage === "info") selectedIcon.src = "img/info active.png";
+
+  // Логика переключения страниц
+  console.log(`Переключение на страницу: ${selectedPage}`);
+}
+

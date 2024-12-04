@@ -6,7 +6,7 @@ body, html {
   background-color: #000;
   color: #fff;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   user-select: none; /* Запрет выделения текста */
   -webkit-user-select: none; /* Для WebKit-браузеров */
   -moz-user-select: none; /* Для Firefox */

@@ -135,3 +135,15 @@ function switchPage(selectedPage) {
   // Логика переключения страниц
   console.log(`Переключение на страницу: ${selectedPage}`);
 }
+
+//================================================================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Проверяем доступность Telegram WebApp API
+    if (typeof Telegram !== "undefined" && Telegram.WebApp) {
+        // Устанавливаем цвет верхней панели на черный
+        Telegram.WebApp.setHeaderColor("#000000");
+    } else {
+        console.error("Telegram WebApp API недоступен.");
+    }
+});

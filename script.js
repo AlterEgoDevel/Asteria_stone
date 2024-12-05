@@ -139,11 +139,16 @@ function switchPage(selectedPage) {
 //================================================================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Проверяем доступность Telegram WebApp API
+    // Проверяем, доступен ли Telegram WebApp API
     if (typeof Telegram !== "undefined" && Telegram.WebApp) {
-        // Устанавливаем цвет верхней панели на черный
+        // Устанавливаем цвет шапки на черный
         Telegram.WebApp.setHeaderColor("#000000");
+
+        // Для проверки параметров темы Telegram (опционально)
+        const themeParams = Telegram.WebApp.themeParams;
+        console.log("Параметры темы:", themeParams);
     } else {
         console.error("Telegram WebApp API недоступен.");
     }
 });
+

@@ -16,6 +16,32 @@ function initializeBalance() {
   balanceDisplay.textContent = balance; // Отображаем текущий баланс
 }
 
+//================================================================================================
+document.addEventListener("DOMContentLoaded", () => {
+    if (typeof Telegram !== "undefined" && Telegram.WebApp) {
+        Telegram.WebApp.expand(); // Разворачивает приложение на весь экран
+        Telegram.WebApp.setHeaderColor("bg_color");
+        console.log("Приложение развернуто, цвет установлен.");
+    } else {
+        console.error("Telegram WebApp API недоступен.");
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Проверяем, доступен ли Telegram WebApp API
+    if (typeof Telegram !== "undefined" && Telegram.WebApp) {
+        // Устанавливаем цвет шапки на черный
+        Telegram.WebApp.setHeaderColor("#000000");
+
+        // Для проверки параметров темы Telegram (опционально)
+        const themeParams = Telegram.WebApp.themeParams;
+        console.log("Параметры темы:", themeParams);
+    } else {
+        console.error("Telegram WebApp API недоступен.");
+    }
+});
+//================================================================================================
+
 // Обработка нажатия на кнопку монеты
 coinCircle.addEventListener('click', () => {
   balance += 1; // Увеличиваем баланс на 1
@@ -136,19 +162,5 @@ function switchPage(selectedPage) {
   console.log(`Переключение на страницу: ${selectedPage}`);
 }
 
-//================================================================================================
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Проверяем, доступен ли Telegram WebApp API
-    if (typeof Telegram !== "undefined" && Telegram.WebApp) {
-        // Устанавливаем цвет шапки на черный
-        Telegram.WebApp.setHeaderColor("#000000");
-
-        // Для проверки параметров темы Telegram (опционально)
-        const themeParams = Telegram.WebApp.themeParams;
-        console.log("Параметры темы:", themeParams);
-    } else {
-        console.error("Telegram WebApp API недоступен.");
-    }
-});
 

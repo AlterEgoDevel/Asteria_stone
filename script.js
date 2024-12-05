@@ -5,7 +5,6 @@ const progressFill = document.getElementById('progress-fill');
 const percentageDisplay = document.getElementById('percentage');
 const timerDisplay = document.getElementById('timer');
 
-Telegram.WebApp.expand();
 
 
 let balance = localStorage.getItem('balance') ? parseInt(localStorage.getItem('balance')) : 0;  // Загружаем сохранённый баланс из localStorage, если он есть

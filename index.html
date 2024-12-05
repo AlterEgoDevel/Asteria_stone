@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Vexoria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="background">
+    <!-- Контейнер звезд -->
+    <div id="stars"></div>
+
+    <!-- Основной контент -->
+    <div id="main-content">
+      <!-- Главная страница -->
+      <div id="home-page" class="page active">
+        <!-- Верхний контейнер -->
+        <div class="top-container">
+          <div class="user-info">
+            <img id="user-avatar" src="img/Ellipse 1.png" alt="User Avatar" class="user-avatar">
+            <span id="username" class="username">User_name</span>
+          </div>
+          <div class="user-balance">
+            <img src="img/Vector coin x.png" alt="Coin Icon" class="coin-icon">
+            <span id="balance" class="balance">0</span>
+          </div>
+        </div>
+
+        <!-- Центральная монета -->
+        <div class="center-section">
+          <div class="coin-circle" id="coin-circle">
+            <img src="img/Vector coin 2.png" alt="Coin" class="coin-image">
+          </div>
+        </div>
+
+        <!-- Прогресс и таймер -->
+        <div class="progress-section">
+          <span id="percentage" class="percentage">0%</span>
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+          <span id="timer" class="timer">08:00</span>
+        </div>
+
+        <!-- Кнопки -->
+        <div class="button-section">
+          <button id="start-button" class="button">Start</button>
+          <button id="boost-button" class="button">Boost</button>
+        </div>
+      </div>
+
+      <!-- Страница заданий -->
+      <div id="tasks-page" class="page">
+        <h1>Задания</h1>
+        <p>Здесь будут отображены доступные задания.</p>
+        <ul>
+          <li>Задание 1</li>
+          <li>Задание 2</li>
+          <li>Задание 3</li>
+        </ul>
+      </div>
+
+      <!-- Страница рефералов -->
+      <div id="referral-page" class="page">
+        <h1>Реферальная система</h1>
+        <p>Пригласите друзей и получите бонусы.</p>
+        <button class="button">Invite</button>
+      </div>
+
+      <!-- Страница информации -->
+      <div id="info-page" class="page">
+        <h1>Информация</h1>
+        <p>Это приложение разработано для демонстрации возможностей.</p>
+      </div>
+    </div>
+
+    <!-- Нижнее меню -->
+    <div class="bottom-container">
+      <div class="bottom-menu">
+        <img src="img/home active.png" alt="Home" class="menu-icon active" id="home" onclick="switchPage('home')">
+        <img src="img/tasks deactive.png" alt="Tasks" class="menu-icon" id="tasks" onclick="switchPage('tasks')">
+        <img src="img/ref deactive.png" alt="Referral" class="menu-icon" id="referral" onclick="switchPage('referral')">
+        <img src="img/info deactive.png" alt="Info" class="menu-icon" id="info" onclick="switchPage('info')">
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

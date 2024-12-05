@@ -1,0 +1,238 @@
+/* Общие стили */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #fff;
+  height: 100%;
+  overflow: auto;
+  user-select: none; /* Запрет выделения текста */
+  -webkit-user-select: none; /* Для WebKit-браузеров */
+  -moz-user-select: none; /* Для Firefox */
+  -ms-user-select: none; /* Для IE/Edge */
+  -webkit-tap-highlight-color: transparent; /* Убирает серый фон при нажатии на мобильных устройствах */
+  touch-action: manipulation; /* Предотвращает нежелательные действия, например, двойное нажатие */
+}
+
+#background {
+  position: relative;
+  width: 390px;
+  height: 100%;
+  margin: auto;
+  background: #000;
+  overflow: hidden;
+}
+
+/* Все элементы приложения */
+.top-container,
+.center-section,
+.progress-section,
+.button-section,
+.bottom-menu {
+  position: relative;
+  z-index: 2; /* Все элементы выше фона и звезд */
+}
+
+/* Анимация звезд */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  opacity: 0;
+  border-radius: 50%;
+  animation: starAnimation 3s infinite ease-in-out;
+}
+
+@keyframes starAnimation {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Верхний контейнер */
+.top-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 20px 0;
+  height: 50px;
+  padding: 0 15px;
+  background-color: #0f241200;
+  border-radius: 10px;
+  border-bottom: 3px solid #0F2412;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.username {
+  margin-left: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #7BD285;
+}
+
+.user-balance {
+  display: flex;
+  align-items: center;
+}
+
+.coin-icon {
+  width: 22px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.balance {
+  font-size: 18px;
+  font-weight: bold;
+  color: #7BD285;
+}
+
+/* Центральная монета */
+.center-section {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.coin-circle {
+  width: 238px;
+  height: 238px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7bd28500;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.coin-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.coin-circle:active {
+  transform: scale(0.9);
+}
+
+/* Прогресс и таймер */
+.progress-section {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.percentage {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.progress-bar {
+  position: relative;
+  height: 10px;
+  background-color: #7BD285;
+  margin: 10px 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  background-color: #0F2412;
+  transition: width 0.5s ease-in-out;
+}
+
+.timer {
+  font-size: 18px;
+  color: #9B9B9B;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Кнопки */
+.button-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.button {
+  width: 139px;
+  height: 44px;
+  background-color: #0F2412;
+  color: #7BD285;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Нижнее меню */
+.bottom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 390px;
+  height: 70px;
+  z-index: 3;
+}
+.bottom-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: fixed;
+  bottom: 0;
+  height: 70px;
+  width: 350px;
+  border-top: 3px solid #0F2412;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Страницы */
+.page {
+  display: none; /* По умолчанию страницы скрыты */
+}
+
+.page.active {
+  display: block; /* Активная страница отображается */
+}
+

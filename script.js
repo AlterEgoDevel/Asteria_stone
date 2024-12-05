@@ -17,6 +17,19 @@ function initializeBalance() {
 }
 
 //================================================================================================
+const themeParams = Telegram.WebApp.themeParams;
+
+// Пример использования параметров
+document.body.style.backgroundColor = themeParams.bg_color || "#ffffff"; // Основной фон
+document.body.style.color = themeParams.text_color || "#000000"; // Цвет текста
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (Telegram.WebApp) {
+        Telegram.WebApp.expand();
+    }
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
     if (typeof Telegram !== "undefined" && Telegram.WebApp) {
         Telegram.WebApp.expand(); // Разворачивает приложение на весь экран

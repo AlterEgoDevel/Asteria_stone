@@ -18,7 +18,7 @@ body, html {
 #background {
   position: relative;
   width: 390px;
-  height: 844px;
+  height: 100%;
   margin: auto;
   background: #000;
   overflow: hidden;
@@ -176,6 +176,7 @@ body, html {
   justify-content: center;
   gap: 40px;
   margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .button {

@@ -1,16 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  if (typeof Telegram !== "undefined" && Telegram.WebApp) {
-      const themeParams = Telegram.WebApp.themeParams;
-      console.log("Параметры темы:", themeParams); // Отображаем текущие параметры темы
-      Telegram.WebApp.setHeaderColor("bg_color"); // Устанавливаем цвет шапки
-  } else {
-      console.error("Telegram WebApp API недоступен.");
-  }
-});
-
-console.log(Telegram.WebApp.themeParams);
-
-
 // Получаем ссылки на элементы интерфейса
 const coinCircle = document.getElementById('coin-circle'); // Круглая кнопка монеты
 const balanceDisplay = document.getElementById('balance'); // Элемент отображения баланса

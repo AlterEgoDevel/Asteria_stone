@@ -1,5 +1,14 @@
-Telegram.WebApp.setHeaderColor("bg_color"); // Использует основной цвет фона
-Telegram.WebApp.setHeaderColor("secondary_bg_color"); // Использует второстепенный цвет
+document.addEventListener("DOMContentLoaded", () => {
+    // Проверяем доступность Telegram WebApp API
+    if (typeof Telegram !== "undefined" && Telegram.WebApp) {
+        // Устанавливаем цвет шапки
+        Telegram.WebApp.setHeaderColor("bg_color"); // Основной цвет фона
+        // Или: Telegram.WebApp.setHeaderColor("secondary_bg_color"); // Второстепенный цвет
+    } else {
+        console.error("Telegram WebApp API недоступен.");
+    }
+});
+
 
 
 const coinCircle = document.getElementById('coin-circle');

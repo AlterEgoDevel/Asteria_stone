@@ -5,6 +5,8 @@ const progressFill = document.getElementById('progress-fill');
 const percentageDisplay = document.getElementById('percentage');
 const timerDisplay = document.getElementById('timer');
 
+Telegram.WebApp.setHeaderColor("bg_color"); // Использует основной цвет фона
+Telegram.WebApp.setHeaderColor("secondary_bg_color"); // Использует второстепенный цвет
 
 
 let balance = localStorage.getItem('balance') ? parseInt(localStorage.getItem('balance')) : 0;  // Загружаем сохранённый баланс из localStorage, если он есть

@@ -392,7 +392,6 @@ body {
 
 /* Описание */
 .page-h2 {
-  width: 350px;
   font-size: 18px;
   margin: 20px 0 30px 0;
 }
@@ -406,7 +405,7 @@ body {
   border-top: 3px solid #0F2412;
   border-bottom: 3px solid #0F2412;
   padding: 0 15px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   margin: 0;
   box-sizing: border-box;
   color: #7BD285;
@@ -485,4 +484,83 @@ body {
 
 .ref-list li:last-child {
   border-bottom: none; /* Убираем линию у последнего элемента */
+}
+
+/* =========================================================================== */
+
+#info-page {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto; /* Центрируем по горизонтали */
+  display: flex;
+  flex-direction: column; /* Колонка для элементов */
+  align-items: center;
+  text-align: center; /* Текст по центру */
+  color: #7BD285; /* Основной цвет текста */
+  font-family: 'Roboto', sans-serif; /* Стиль шрифта */
+  height: 100vh; /* Задаем высоту в 100% от высоты окна браузера */
+  overflow-y: auto; /* Разрешаем вертикальную прокрутку */
+}
+
+.roadmap {
+  margin-top: 20px; /* Добавляем отступ сверху */
+  width: 350px; /* Ширина заголовка фиксирована */
+  height: 50px; /* Фиксированная высота заголовка */
+  border-radius: 10px; /* Скругляем углы заголовка */
+  border-bottom: 3px solid #0F2412; /* Добавляем нижнюю границу */
+  display: flex; /* Используем flexbox для центрирования содержимого */
+  justify-content: center; /* Центрируем текст по горизонтали */
+  align-items: center; /* Центрируем текст по вертикали */
+}
+
+.roadmap h1 {
+  text-align: center;
+  color: #78d187;
+  font-size: 24px;
+}
+
+#info-page-p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.roadmap-container {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  width: 350px;
+  background-color: rgba(49, 49, 49, 0.2);
+  text-align: left;
+  border-top: 3px solid #0F2412;
+  border-bottom: 3px solid #0F2412;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
+
+.roadmap-container h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+ol {
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
 }

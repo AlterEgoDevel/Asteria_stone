@@ -367,51 +367,77 @@ body {
   flex-direction: column; /* Колонка для элементов */
   align-items: center;
   text-align: center; /* Текст по центру */
-  padding: 20px; /* Отступы внутри страницы */
   color: #7BD285; /* Основной цвет текста */
   font-family: 'Roboto', sans-serif; /* Стиль шрифта */
+  height: 100vh; /* Задаем высоту в 100% от высоты окна браузера */
+  overflow-y: auto; /* Разрешаем вертикальную прокрутку */
+}
+
+.page-top-box {
+  margin-top: 20px; /* Добавляем отступ сверху */
+  width: 350px; /* Ширина заголовка фиксирована */
+  height: 50px; /* Фиксированная высота заголовка */
+  border-radius: 10px; /* Скругляем углы заголовка */
+  border-bottom: 3px solid #0F2412; /* Добавляем нижнюю границу */
+  display: flex; /* Используем flexbox для центрирования содержимого */
+  justify-content: center; /* Центрируем текст по горизонтали */
+  align-items: center; /* Центрируем текст по вертикали */
 }
 
 /* Заголовок */
 #ref-page h1 {
   font-size: 24px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #7BD285; /* Линия под заголовком */
-  padding-bottom: 5px;
   width: 100%; /* На всю ширину контейнера */
 }
 
 /* Описание */
-#ref-page p {
-  font-size: 16px;
-  margin: 15px 0;
-  line-height: 1.4;
+.page-h2 {
+  font-size: 18px;
+  margin: 20px 0 30px 0;
 }
 
 /* Блок "How Does It Work?" */
 .ref-info {
+  height: 195px;
+  width: 100%;
   background-color: rgba(49, 49, 49, 0.2);
   border-radius: 10px;
-  border: 2px solid #0F2412;
-  padding: 15px;
-  margin: 20px 0;
-  width: 100%;
+  border-top: 3px solid #0F2412;
+  border-bottom: 3px solid #0F2412;
+  padding: 0 15px;
+  margin: 0;
   box-sizing: border-box;
   color: #7BD285;
-  font-size: 14px;
   text-align: left; /* Текст слева */
+}
+
+.ref-info h3 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0 10px 0;
+}
+
+.ref-info p {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 6px 0;
+  text-align: left;
 }
 
 /* Кнопка "Invite" */
 #ref-page .button {
+  height: 44px;
+  width: 152px;
   background-color: #0F2412; /* Темно-зеленый фон */
   color: #7BD285; /* Текстовый цвет */
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 18px;
   padding: 12px 20px;
   cursor: pointer;
-  margin: 15px 0;
+  margin: 20px 0;
   transition: background-color 0.3s ease;
 }
 
@@ -423,14 +449,24 @@ body {
 .ref-list {
   background-color: rgba(49, 49, 49, 0.2);
   border-radius: 10px;
-  border: 2px solid #0F2412;
-  padding: 15px;
-  margin: 20px 0;
+  border-top: 3px solid #0F2412;
+  border-bottom: 3px solid #0F2412;
+  padding: 0 15px 15px 15px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   width: 100%;
   box-sizing: border-box;
   color: #7BD285;
   font-size: 14px;
   text-align: left; /* Текст слева */
+}
+
+.ref-list h3 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .ref-list ul {

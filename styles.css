@@ -319,10 +319,19 @@ body {
   box-sizing: border-box; /* Включаем отступы в расчет ширины и высоты */
 }
 
+#wallet {
+  width: 50px; /* Ширина иконки */
+  height: 50px; /* Высота иконки */
+  background-image: url('img/Vector coin wallet.png'); /* Фон с изображением */
+  background-size: cover; /* Изображение занимает весь блок */
+  background-position: center; /* Центрируем изображение */
+  border-radius: 50%; /* Скругляем иконку до круга */
+}
+
 .icon {
   width: 50px; /* Ширина иконки */
   height: 50px; /* Высота иконки */
-  background-image: url('img/Vector coin 2.png'); /* Фон с изображением */
+  background-image: url('img/Vector coin telegram.png'); /* Фон с изображением */
   background-size: cover; /* Изображение занимает весь блок */
   background-position: center; /* Центрируем изображение */
   border-radius: 50%; /* Скругляем иконку до круга */

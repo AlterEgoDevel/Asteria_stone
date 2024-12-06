@@ -361,7 +361,7 @@ body {
 /* Основной контейнер страницы */
 #ref-page {
   width: 100%;
-  max-width: 350px;
+  max-width: 390px;
   margin: 0 auto; /* Центрируем по горизонтали */
   display: flex;
   flex-direction: column; /* Колонка для элементов */
@@ -399,7 +399,7 @@ body {
 /* Блок "How Does It Work?" */
 .ref-info {
   height: 195px;
-  width: 100%;
+  width: 350px;
   background-color: rgba(49, 49, 49, 0.2);
   border-radius: 10px;
   border-top: 3px solid #0F2412;
@@ -420,7 +420,6 @@ body {
 
 .ref-info p {
   font-size: 14px;
-  font-weight: bold;
   text-align: center;
   margin: 0 0 6px 0;
   text-align: left;
@@ -454,7 +453,7 @@ body {
   padding: 0 15px 15px 15px;
   margin-top: 10px;
   margin-bottom: 100px;
-  width: 100%;
+  width: 350px;
   box-sizing: border-box;
   color: #7BD285;
   font-size: 14px;

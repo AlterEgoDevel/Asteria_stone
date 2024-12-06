@@ -122,42 +122,45 @@ function createStar() {
 // Создание звезд каждые 200 мс
 setInterval(createStar, 200);
 
-// Логика переключения страниц
 function switchPage(selectedPage) {
-  // Скрываем все страницы
-  const pages = document.querySelectorAll(".page");
-  pages.forEach((page) => page.classList.remove("active"));
+    // Скрываем все страницы
+    const pages = document.querySelectorAll(".page");
+    pages.forEach((page) => {
+        page.classList.remove("active");
+        page.style.display = "none"; // Скрываем явно
+    });
 
-  // Показываем выбранную страницу
-  const selectedPageElement = document.getElementById(selectedPage + "-page");
-  if (selectedPageElement) {
-      selectedPageElement.classList.add("active");
-  }
+    // Показываем выбранную страницу
+    const selectedPageElement = document.getElementById(`${selectedPage}-page`);
+    if (selectedPageElement) {
+        selectedPageElement.classList.add("active");
+        selectedPageElement.style.display = "flex"; // Отображаем явно
+    } else {
+        console.error(`Элемент с ID ${selectedPage}-page не найден`);
+    }
 
-  // Сбрасываем активное состояние у всех иконок
-  const icons = document.querySelectorAll(".menu-icon");
-  icons.forEach((icon) => {
-      icon.classList.remove("active");
+    // Сбрасываем иконки
+    const icons = document.querySelectorAll(".menu-icon");
+    icons.forEach((icon) => {
+        icon.classList.remove("active");
+        icon.src = `img/${icon.id} deactive.png`; // Исправление пути для иконок
+        console.log(`Иконка ${icon.id} сброшена`);
+    });
 
-      if (icon.id === "home") icon.src = "img/home deactive.png";
-      if (icon.id === "tasks") icon.src = "img/tasks deactive.png";
-      if (icon.id === "referral") icon.src = "img/ref deactive.png";
-      if (icon.id === "info") icon.src = "img/info deactive.png";
-  });
+    // Активируем выбранную иконку
+    const selectedIcon = document.getElementById(selectedPage);
+    if (selectedIcon) {
+        selectedIcon.classList.add("active");
+        selectedIcon.src = `img/${selectedPage} active.png?${new Date().getTime()}`;
+        console.log(`Иконка ${selectedPage} активирована`);
+    } else {
+        console.error(`Иконка с ID ${selectedPage} не найдена`);
+    }
 
-  // Устанавливаем активное состояние для выбранной иконки
-  const selectedIcon = document.getElementById(selectedPage);
-  selectedIcon?.classList.add("active");
-
-// Меняем изображение на активное с уникальным параметром времени
-if (selectedPage === "home") selectedIcon.src = `img/home active.png?${new Date().getTime()}`;
-if (selectedPage === "tasks") selectedIcon.src = `img/tasks active.png?${new Date().getTime()}`;
-if (selectedPage === "referral") selectedIcon.src = `img/ref active.png?${new Date().getTime()}`;
-if (selectedPage === "info") selectedIcon.src = `img/info active.png?${new Date().getTime()}`;
-
-
-  console.log(`Переключение на страницу: ${selectedPage}`);
+    console.log(`Переключение на страницу: ${selectedPage}`);
 }
+
+
 
 
 // Инициализация баланса при загрузке страницы

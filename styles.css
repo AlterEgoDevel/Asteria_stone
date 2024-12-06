@@ -215,6 +215,7 @@ body, html {
   height: 70px;
   z-index: 3;
   margin: 0 auto;
+  pointer-events: none; /* Не блокирует касания */
 }
 .bottom-menu {
   display: flex;
@@ -227,6 +228,7 @@ body, html {
   border-top: 3px solid #0F2412;
   background-color: #000;
   border-radius: 10px;
+  pointer-events: auto; /* Включает касания только для меню */
 }
 
 .menu-icon {
@@ -264,6 +266,7 @@ body {
   margin: 0; /* Убирает внешние отступы у страницы */
   padding: 0; /* Убирает внутренние отступы у страницы */
   /* Убираем flex, чтобы страница корректно скроллилась */
+  overflow: auto; /* Разрешает прокрутку страницы */
 }
 
 #tasks-page {

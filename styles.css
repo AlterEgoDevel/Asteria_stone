@@ -279,6 +279,7 @@ body {
   overflow-y: auto; /* Добавляем вертикальную прокрутку, если содержимое превышает высоту контейнера */
   margin: 0 auto; /* Центрируем контейнер по горизонтали */
   -webkit-overflow-scrolling: touch; /* Включаем плавный скроллинг для iOS/Android */
+  padding-bottom: 70px; /* Учитываем высоту нижнего меню */
 }
 
 
@@ -351,4 +352,100 @@ body {
   background-image: url('img/Vector coin x.png'); /* Фон с изображением */
   background-size: cover; /* Изображение занимает весь блок */
   background-position: center; /* Центрируем изображение */
+}
+
+
+/* =========================================================================== */
+
+
+/* Основной контейнер страницы */
+#ref-page {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto; /* Центрируем по горизонтали */
+  display: flex;
+  flex-direction: column; /* Колонка для элементов */
+  align-items: center;
+  text-align: center; /* Текст по центру */
+  padding: 20px; /* Отступы внутри страницы */
+  color: #7BD285; /* Основной цвет текста */
+  font-family: 'Roboto', sans-serif; /* Стиль шрифта */
+}
+
+/* Заголовок */
+#ref-page h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #7BD285; /* Линия под заголовком */
+  padding-bottom: 5px;
+  width: 100%; /* На всю ширину контейнера */
+}
+
+/* Описание */
+#ref-page p {
+  font-size: 16px;
+  margin: 15px 0;
+  line-height: 1.4;
+}
+
+/* Блок "How Does It Work?" */
+.ref-info {
+  background-color: rgba(49, 49, 49, 0.2);
+  border-radius: 10px;
+  border: 2px solid #0F2412;
+  padding: 15px;
+  margin: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: #7BD285;
+  font-size: 14px;
+  text-align: left; /* Текст слева */
+}
+
+/* Кнопка "Invite" */
+#ref-page .button {
+  background-color: #0F2412; /* Темно-зеленый фон */
+  color: #7BD285; /* Текстовый цвет */
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin: 15px 0;
+  transition: background-color 0.3s ease;
+}
+
+#ref-page .button:hover {
+  background-color: #1C3A25; /* Более яркий цвет при наведении */
+}
+
+/* Список рефералов */
+.ref-list {
+  background-color: rgba(49, 49, 49, 0.2);
+  border-radius: 10px;
+  border: 2px solid #0F2412;
+  padding: 15px;
+  margin: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: #7BD285;
+  font-size: 14px;
+  text-align: left; /* Текст слева */
+}
+
+.ref-list ul {
+  list-style: none; /* Убираем маркеры */
+  padding: 0;
+  margin: 0;
+}
+
+.ref-list li {
+  display: flex;
+  justify-content: space-between; /* Разделяем имя и бонус */
+  padding: 5px 0;
+  border-bottom: 1px solid #0F2412; /* Линия между элементами */
+}
+
+.ref-list li:last-child {
+  border-bottom: none; /* Убираем линию у последнего элемента */
 }

@@ -56,6 +56,13 @@ body, html {
   }
 }
 
+#main-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
 /* Верхний контейнер */
 .top-container {
   position: relative;
@@ -229,11 +236,20 @@ body, html {
 
 /* Страницы */
 .page {
-  display: none; /* По умолчанию страницы скрыты */
+  display: none;
+  position: relative; /* Меняем с absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .page.active {
-  display: block; /* Активная страница отображается */
+  display: flex; /* Используем flex, если нужно */
+  position: relative; /* Гарантируем корректное позиционирование */
+  flex-direction: column; /* Дочерние элементы в колонку */
+  z-index: 2;
 }
 
 /* ============================================================================================= */
@@ -247,17 +263,28 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Центрируем по вертикали */
+  align-items: center; /* Центрируем по горизонтали */
+  min-height: 100vh; /* Обеспечиваем полную высоту */
+}
+
+#tasks-page {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center; /* Центрируем по горизонтали */
+  max-width: 400px;
+  flex-direction: column; /* Дочерние элементы в колонку */
 }
 
 .header {
   margin-top: 20px;
   width: 320px;
   height: 50px;
-  border-radius: 8px;
+  border-radius: 10px;
   border-bottom: 3px solid #0F2412;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 0 15px;
 }
@@ -274,11 +301,11 @@ body {
 }
 
 .task-item {
-  margin-top: 30px;
+  margin-top: 12px;
   width: 350px;
   height: 70px;
   background: rgba(49, 49, 49, 0.2);
-  border-radius: 8px;
+  border-radius: 10px;
   border-top: 3px solid #0F2412;
   border-bottom: 3px solid #0F2412;
   display: flex;

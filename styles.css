@@ -408,7 +408,7 @@ body {
 
 /* Блок "How Does It Work?" */
 .ref-info {
-  height: 195px;
+  height: auto;
   width: 350px;
   background-color: rgba(49, 49, 49, 0.2);
   border-radius: 10px;

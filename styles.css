@@ -308,15 +308,34 @@ body {
   margin-top: 12px; /* Отступ между задачами */
   width: 350px; /* Фиксированная ширина элемента */
   height: 70px; /* Фиксированная высота элемента */
+  min-height: 70px;
   background: rgba(49, 49, 49, 0.2); /* Полупрозрачный фон */
   border-radius: 10px; /* Скругленные углы */
   border-top: 3px solid #0F2412; /* Верхняя граница */
   border-bottom: 3px solid #0F2412; /* Нижняя граница */
   display: flex; /* Flexbox для размещения содержимого */
   align-items: center; /* Центрируем содержимое по вертикали */
-  justify-content: space-between; /* Разделяем содержимое на противоположные стороны */
-  padding: 0 15px; /* Добавляем внутренние отступы по бокам */
+  justify-content: space-evenly; /* Разделяем содержимое на противоположные стороны */
   box-sizing: border-box; /* Включаем отступы в расчет ширины и высоты */
+}
+
+.section-text {
+  height: 100%;
+  padding-top: 6px;
+}
+
+.button-tasks {
+  width: 60px; /* Устанавливаем ширину кнопки */
+  height: 32px; /* Устанавливаем высоту кнопки */
+  background-color: #0F2412; /* Темный цвет фона кнопки */
+  color: #7BD285; /* Светлый цвет текста на кнопке */
+  border: none; /* Убираем рамку кнопки */
+  border-radius: 10px; /* Скругляем углы кнопки */
+  font-size: 14px; /* Размер шрифта на кнопке */
+  font-weight: lighter; /* Жирный шрифт для текста на кнопке */
+  cursor: pointer; /* Курсор в виде руки при наведении на кнопку */
+  transition: background-color 0.3s, color 0.3s; /* Плавное изменение фона и цвета текста при взаимодействии */
+  z-index: 1;
 }
 
 #wallet {
@@ -340,13 +359,24 @@ body {
 .task-text {
   font-size: 14px; /* Размер шрифта текста задачи */
   color: #7BD285; /* Цвет текста */
-  margin-left: 15px; /* Отступ слева от иконки */
   flex: 1; /* Растягиваем текст, чтобы занять свободное пространство */
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.task-sum {
+  font-size: 14px; /* Размер шрифта текста задачи */
+  color: #7BD285; /* Цвет текста */
+  flex: 1; /* Растягиваем текст, чтобы занять свободное пространство */
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .right-section {
   display: flex; /* Flexbox для размещения содержимого */
-  align-items: center; /* Центрируем содержимое по вертикали */
+  align-items: fl; /* Центрируем содержимое по вертикали */
 }
 
 .points {
@@ -355,12 +385,13 @@ body {
   font-weight: bold; /* Жирный текст */
 }
 
-.task-icon {
+.inline-icon {
   width: 22px; /* Ширина иконки */
   height: 20px; /* Высота иконки */
   background-image: url('img/Vector coin x.png'); /* Фон с изображением */
   background-size: cover; /* Изображение занимает весь блок */
   background-position: center; /* Центрируем изображение */
+  margin-left: 15px;
 }
 
 

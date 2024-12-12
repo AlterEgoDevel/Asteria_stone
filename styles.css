@@ -315,12 +315,15 @@ body {
   border-bottom: 3px solid #0F2412; /* Нижняя граница */
   display: flex; /* Flexbox для размещения содержимого */
   align-items: center; /* Центрируем содержимое по вертикали */
-  justify-content: space-evenly; /* Разделяем содержимое на противоположные стороны */
+  justify-content: space-between; /* Разделяем содержимое на противоположные стороны */
   box-sizing: border-box; /* Включаем отступы в расчет ширины и высоты */
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .section-text {
   height: 100%;
+  width: 182px;
   padding-top: 6px;
 }
 
@@ -338,10 +341,19 @@ body {
   z-index: 1;
 }
 
-#wallet {
+#wallet-icon {
   width: 50px; /* Ширина иконки */
   height: 50px; /* Высота иконки */
   background-image: url('img/Vector coin wallet.png'); /* Фон с изображением */
+  background-size: cover; /* Изображение занимает весь блок */
+  background-position: center; /* Центрируем изображение */
+  border-radius: 50%; /* Скругляем иконку до круга */
+}
+
+#channel-1-icon {
+  width: 50px; /* Ширина иконки */
+  height: 50px; /* Высота иконки */
+  background-image: url('img/Vector coin 3.png'); /* Фон с изображением */
   background-size: cover; /* Изображение занимает весь блок */
   background-position: center; /* Центрируем изображение */
   border-radius: 50%; /* Скругляем иконку до круга */

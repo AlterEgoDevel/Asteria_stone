@@ -332,7 +332,7 @@ body {
   border: none; /* Убираем рамку кнопки */
   border-radius: 10px; /* Скругляем углы кнопки */
   font-size: 14px; /* Размер шрифта на кнопке */
-  font-weight: lighter; /* Жирный шрифт для текста на кнопке */
+  font-weight: bold; /* Жирный шрифт для текста на кнопке */
   cursor: pointer; /* Курсор в виде руки при наведении на кнопку */
   transition: background-color 0.3s, color 0.3s; /* Плавное изменение фона и цвета текста при взаимодействии */
   z-index: 1;
